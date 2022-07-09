@@ -18,7 +18,7 @@ func (b *BitMask) Set(flag uint64) BitMask {
 }
 
 func (b *BitMask) Clear(flag uint64) BitMask {
-	*b = *b & BitMask(1<<flag)
+	*b = *b &^ BitMask(1<<flag)
 	return *b
 }
 
